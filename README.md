@@ -10,6 +10,6 @@
 
 ## Architecture
 
-![grafic](/doc/architecture.png)
+![grafic](/docs/architecture.png)
 
 *To edit use https://www.draw.io/ and open docs/architecture.xml*
