@@ -1,7 +1,8 @@
-# John McClane
+# John McClane - API
 
 ![Logo](https://media.giphy.com/media/3ohzdJ4gBMo8omJuU0/giphy.gif)
 
+This project exposes listings operations. Every listing in our inventory should pass through this API. 
 
 ## Built With
 
