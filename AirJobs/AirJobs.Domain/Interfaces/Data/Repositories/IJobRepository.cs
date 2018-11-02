@@ -1,8 +1,8 @@
-﻿using AirJobs.Domain.Entities.Job;
-using GeoCoordinatePortable;
+﻿using GeoCoordinatePortable;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using AirJobs.Domain.Entities.Jobs;
 
 namespace AirJobs.Domain.Interfaces.Data.Repositories
 {

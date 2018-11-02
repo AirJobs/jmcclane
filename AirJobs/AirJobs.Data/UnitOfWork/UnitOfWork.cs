@@ -13,10 +13,12 @@ namespace AirJobs.Data.UnitOfWork
         public IJobRepository Job => _job ?? (_job = new JobRepository(DbContext));
         public ISchedulingRepository Scheduling => _scheduling ?? (_scheduling = new SchedulingRepository(DbContext));
         public IFavoriteRepository Favorite => _favorite ?? (_favorite = new FavoriteRepository(DbContext));
+        public IEvaluationRepository Evaluation => _evaluation ?? (_evaluation = new EvaluationRepository(DbContext));
         public IAddressRepository Address => _address ?? (_address = new AddressRepository(DbContext));
         public ICityRepository City => _city ?? (_city ?? new CityRepsoitory(DbContext));
         public IStateRepository State => _state ?? (_state = new StateRepository(DbContext));
         public ICountryRepository Country => _country ?? (_country = new CountryRepository(DbContext));
+        
 
         public bool Save()
         {
@@ -46,6 +48,7 @@ namespace AirJobs.Data.UnitOfWork
         private IJobRepository _job;
         private ISchedulingRepository _scheduling;
         private IFavoriteRepository _favorite;
+        private IEvaluationRepository _evaluation;
         private IAddressRepository _address;
         private ICityRepository _city;
         private IStateRepository _state;

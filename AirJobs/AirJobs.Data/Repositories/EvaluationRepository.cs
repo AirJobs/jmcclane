@@ -5,9 +5,9 @@ using AirJobs.Domain.Interfaces.Data.Repositories;
 
 namespace AirJobs.Data.Repositories
 {
-    public class FavoriteRepository : BaseRepositoryAsync<Favorite>, IFavoriteRepository
+    public class EvaluationRepository : BaseRepositoryAsync<Evaluation>, IEvaluationRepository
     {
-        public FavoriteRepository(AirJobsContext dbContext) : base(dbContext)
+        public EvaluationRepository(AirJobsContext dbContext) : base(dbContext)
         {
         }
     }

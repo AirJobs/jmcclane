@@ -1,7 +1,7 @@
 ﻿using AirJobs.Data.EntityConfig;
-using AirJobs.Domain.Entities.Address;
-using AirJobs.Domain.Entities.Job;
-using AirJobs.Domain.Entities.User;
+using AirJobs.Domain.Entities.Addresses;
+using AirJobs.Domain.Entities.Jobs;
+using AirJobs.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 
 namespace AirJobs.Data.Context
@@ -20,6 +20,7 @@ namespace AirJobs.Data.Context
         public DbSet<Address> Address { get; set; }
         public DbSet<Scheduling> Scheduling { get; set; }
         public DbSet<Favorite> Favorite { get; set; }
+        public DbSet<Evaluation> Evaluation { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,6 +34,7 @@ namespace AirJobs.Data.Context
             modelBuilder.ApplyConfiguration(new CountryConfig());
             modelBuilder.ApplyConfiguration(new SchedulingConfig());
             modelBuilder.ApplyConfiguration(new FavoriteConfig());
+            modelBuilder.ApplyConfiguration(new EvaluationConfig());
         }
     }
 }

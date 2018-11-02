@@ -1,11 +1,11 @@
-﻿using AirJobs.Domain.Entities.User;
-using AirJobs.Domain.Interfaces.Data.UnitOfWork;
+﻿using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.Domain.ValueObjects;
 using AirJobs.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
+using AirJobs.Domain.Entities.Users;
 
 namespace AirJobs.IdentityServer.Controllers
 {

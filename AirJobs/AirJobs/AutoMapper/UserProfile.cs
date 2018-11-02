@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Users;
 using AirJobs.Domain.ValueObjects;
 using AirJobs.IdentityServer.Models;
 using AirJobs.Models.Dtos.User;

@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.Address;
+﻿using AirJobs.Domain.Entities.Addresses;
 
 namespace AirJobs.Domain.Interfaces.Data.Repositories
 {

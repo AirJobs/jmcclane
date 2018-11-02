@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Users;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

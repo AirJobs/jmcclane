@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.Job;
+﻿using AirJobs.Domain.Entities.Jobs;
 using AirJobs.Models.Dtos.Job;
 using AutoMapper;
 
@@ -8,7 +8,8 @@ namespace AirJobs.AutoMapper
     {
         public JobProfile()
         {
-            CreateMap<Job, JobListDto>();
+            CreateMap<Job, JobListDto>()
+                .ForMember(x => x.Stars, config => config.MapFrom(x => x.GetAverageRating()));
 
             CreateMap<Job, JobItemDto>()
                 .ForMember(x => x.Street, opt => opt.MapFrom(x => x.Address.Street))

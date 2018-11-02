@@ -10,5 +10,6 @@ namespace AirJobs.Models.Dtos.Job
         public DateTime CreatedDate { get; set; }
         public string ImageUrl { get; set; }
         public decimal Price { get; set; }
+        public int Stars { get; set; }
     }
 }

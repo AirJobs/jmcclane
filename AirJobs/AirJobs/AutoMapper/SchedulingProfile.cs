@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Users;
 using AirJobs.Models.Dtos.Scheduling;
 using AirJobs.Models.ViewModels;
 using AutoMapper;

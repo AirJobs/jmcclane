@@ -1,5 +1,4 @@
-﻿using AirJobs.Domain.Entities.Job;
-using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Jobs;
 using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.Models.Dtos.Job;
 using AirJobs.Models.Filters;

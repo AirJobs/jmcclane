@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Users;
 
 namespace AirJobs.Domain.Interfaces.Data.Repositories
 {

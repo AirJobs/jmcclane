@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.Job;
+﻿using AirJobs.Domain.Entities.Jobs;
 using AirJobs.Models.Dtos.Job;
 using AutoMapper;
 

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AirJobs.Models.Dtos.Evaluation;
+using System;
+using System.Collections.Generic;
 
 namespace AirJobs.Models.Dtos.Job
 {
@@ -16,5 +18,7 @@ namespace AirJobs.Models.Dtos.Job
         public string CityName { get; set; }
         public string State { get; set; }
         public string CountryName { get; set; }
+
+        public IEnumerable<EvaluationListForJobDto> Evaluations { get; set; }
     }
 }

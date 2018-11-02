@@ -1,7 +1,8 @@
 ﻿using AirJobs.Domain.Entities.Base;
+using AirJobs.Domain.Entities.Users;
 using System;
 
-namespace AirJobs.Domain.Entities.User
+namespace AirJobs.Domain.Entities.Jobs
 {
     public class Favorite : BaseEntity
     {
@@ -10,6 +11,6 @@ namespace AirJobs.Domain.Entities.User
         public DateTime CreatedDate { get; set; }
 
         public virtual User User { get; set; }
-        public virtual Job.Job Job { get; set; }
+        public virtual Job Job { get; set; }
     }
 }

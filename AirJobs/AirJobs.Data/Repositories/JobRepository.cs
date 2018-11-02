@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AirJobs.Data.Context;
 using AirJobs.Data.Repositories.Base;
-using AirJobs.Domain.Entities.Job;
+using AirJobs.Domain.Entities.Jobs;
 using AirJobs.Domain.Interfaces.Data.Repositories;
 using GeoCoordinatePortable;
 using Microsoft.EntityFrameworkCore;

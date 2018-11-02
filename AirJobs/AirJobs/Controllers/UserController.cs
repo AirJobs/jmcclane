@@ -1,5 +1,4 @@
-﻿using AirJobs.Domain.Entities.Address;
-using AirJobs.Domain.Interfaces.Data.UnitOfWork;
+﻿using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.IdentityServer;
 using AirJobs.Models.Dtos.Address;
 using AirJobs.Models.Dtos.Job;
@@ -14,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
+using AirJobs.Domain.Entities.Addresses;
 
 namespace AirJobs.Controllers
 {

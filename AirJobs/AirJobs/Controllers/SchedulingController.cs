@@ -1,5 +1,7 @@
-﻿using AirJobs.Domain.Entities.User;
+﻿using AirJobs.Domain.Entities.Jobs;
+using AirJobs.Domain.Entities.Users;
 using AirJobs.Domain.Interfaces.Data.UnitOfWork;
+using AirJobs.Models.Dtos.Evaluation;
 using AirJobs.Models.Dtos.Scheduling;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
@@ -48,6 +50,24 @@ namespace AirJobs.Controllers
                 return NoContent();
 
             return CreatedAtRoute("GetSchedulingById", new {id = newScheduling.Id}, newScheduling);
+        }
+
+        [HttpPost]
+        [HttpGet("{id:guid}", Name = "GetSchedulingById")]
+        public async Task<IActionResult> CreateEvalution(Guid id, [FromBody]EvaluationCreateDto vm)
+        {
+            var evaluation = mapper.Map<Evaluation>(vm);
+            var scheduling = await unitOfWork.Scheduling.Get(id);
+            evaluation.SchedulingId = scheduling.Id;
+            evaluation.JobId = scheduling.JobId;
+
+            var newEvaluation = await unitOfWork.Evaluation.Add(evaluation);
+            var result = await unitOfWork.SaveAsync();
+
+            if (!result)
+                return NoContent();
+
+            return CreatedAtRoute("GetSchedulingById", new { id = evaluation.Id }, newEvaluation);
         }
     }
 }

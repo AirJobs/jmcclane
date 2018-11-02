@@ -10,6 +10,7 @@ namespace AirJobs.Domain.Interfaces.Data.UnitOfWork
         IJobRepository Job { get; }
         ISchedulingRepository Scheduling { get; }
         IFavoriteRepository Favorite { get; }
+        IEvaluationRepository Evaluation { get; }
         IAddressRepository Address { get; }
         ICityRepository City { get; }
         IStateRepository State { get; }

@@ -1,4 +1,4 @@
-﻿using AirJobs.Domain.Entities.Address;
+﻿using AirJobs.Domain.Entities.Addresses;
 using AirJobs.Models.Dtos.City;
 using AirJobs.Models.ViewModels;
 using AutoMapper;

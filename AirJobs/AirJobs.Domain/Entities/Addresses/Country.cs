@@ -1,7 +1,7 @@
-﻿using AirJobs.Domain.Entities.Base;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using AirJobs.Domain.Entities.Base;
 
-namespace AirJobs.Domain.Entities.Address
+namespace AirJobs.Domain.Entities.Addresses
 {
     public class Country : BaseEntity
     {

@@ -2,7 +2,7 @@
 
 namespace AirJobs.Domain.Interfaces.Data.Repositories
 {
-    public interface IFavoriteRepository : IBaseRepositoryAsync<Favorite>
+    public interface IEvaluationRepository : IBaseRepositoryAsync<Evaluation>
     {
     }
 }

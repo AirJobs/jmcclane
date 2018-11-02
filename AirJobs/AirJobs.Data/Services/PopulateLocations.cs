@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using AirJobs.Domain.Entities.Address;
+using AirJobs.Domain.Entities.Addresses;
 using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using RestSharp;
 
