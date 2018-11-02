@@ -34,7 +34,7 @@ namespace AirJobs.Data.EntityConfig
 
             builder.HasOne(x => x.Scheduling)
                 .WithOne(x => x.Evaluation)
-                .HasPrincipalKey("SchedulingId");
+                .HasForeignKey<Evaluation>(x => x.SchedulingId);
         }
     }
 }

@@ -65,7 +65,7 @@ namespace AirJobs
 
             services.AddSwaggerGen(gen =>
             {
-                gen.SwaggerDoc("v1", new Info { Title = "AirJobs", Version = "v1", Contact = new Contact { Name = "AirJobs", Email = "airjobs@outlook.com.br" } });
+                gen.SwaggerDoc("v2", new Info { Title = "AirJobs", Version = "v1", Contact = new Contact { Name = "AirJobs", Email = "airjobs@outlook.com.br" } });
             });
 
             #endregion
@@ -97,7 +97,7 @@ namespace AirJobs
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "AirJobs API");
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "AirJobs API");
             });
 
             app.UseMvc();

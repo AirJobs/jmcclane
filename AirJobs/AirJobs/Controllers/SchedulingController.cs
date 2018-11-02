@@ -52,8 +52,7 @@ namespace AirJobs.Controllers
             return CreatedAtRoute("GetSchedulingById", new {id = newScheduling.Id}, newScheduling);
         }
 
-        [HttpPost]
-        [HttpGet("{id:guid}", Name = "GetSchedulingById")]
+        [HttpPost("{id:guid}/evaluation")]
         public async Task<IActionResult> CreateEvalution(Guid id, [FromBody]EvaluationCreateDto vm)
         {
             var evaluation = mapper.Map<Evaluation>(vm);
