@@ -1,4 +1,5 @@
-﻿using AirJobs.Domain.Entities.Jobs;
+﻿using AirJobs.Data.Services;
+using AirJobs.Domain.Entities.Jobs;
 using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.Models.Dtos.Job;
 using AirJobs.Models.Filters;
@@ -112,6 +113,20 @@ namespace AirJobs.Controllers
             var job = mapper.Map<JobItemDto>(unitOfWork.Job.Get(jobId));
 
             return CreatedAtRoute("ListFavoritesByUser", new {userId = userId}, job);
+        }
+
+        [HttpPost("/populate")]
+        public async Task<IActionResult> Populate()
+        {
+            try
+            {
+                await PopularJobs.Initialize(unitOfWork);
+                return Ok("Tudo certo");
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
         }
     }
 }
