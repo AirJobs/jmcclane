@@ -31,10 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\images\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AirJobs.Data\AirJobs.Data.csproj" />
     <ProjectReference Include="..\AirJobs.Domain\AirJobs.Domain.csproj" />
     <ProjectReference Include="..\AirJobs.IdentityServer\AirJobs.IdentityServer.csproj" />

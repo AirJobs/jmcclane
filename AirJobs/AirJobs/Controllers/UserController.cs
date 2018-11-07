@@ -1,11 +1,11 @@
-﻿using AirJobs.Domain.Interfaces.Data.UnitOfWork;
+﻿using AirJobs.Domain.Entities.Addresses;
+using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.IdentityServer;
 using AirJobs.Models.Dtos.Address;
 using AirJobs.Models.Dtos.Job;
 using AirJobs.Models.Dtos.Scheduling;
 using AirJobs.Models.Dtos.User;
 using AutoMapper;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,7 +13,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
-using AirJobs.Domain.Entities.Addresses;
 
 namespace AirJobs.Controllers
 {
@@ -36,7 +35,6 @@ namespace AirJobs.Controllers
 
         #endregion
 
-        [Authorize]
         [HttpGet("{userId:guid}", Name = "GetUserById")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(UserItemDto))]
         public async Task<IActionResult> Get(Guid userId)
