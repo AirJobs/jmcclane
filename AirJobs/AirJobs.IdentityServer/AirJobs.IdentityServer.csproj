@@ -21,4 +21,8 @@
     <ProjectReference Include="..\AirJobs.Domain\AirJobs.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
 </Project>

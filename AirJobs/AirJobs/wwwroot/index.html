@@ -7,122 +7,116 @@
 <link rel="stylesheet" href="css/monthly.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script src="jquery.lightcheckout.js"></script>
+<script
+    src="https://code.jquery.com/jquery-2.2.4.min.js"
+    integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+    crossorigin="anonymous"></script>
+<script src="js/form.js"></script>
 <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-body, html {
-    height: 100%;
-    line-height: 1.8;
-}
-/* Full height image header */
-.bgimg-1 {
-    background-position: center;
-    background-size: cover;
-    background-image: url(images/cleanHouse.jpg);
-    min-height: 100%;
-}
-.bar .button {
-    padding: 16px;
-}
-
-.btn {
-    
-    width: 350px;
-    height: 100px;
-    display: flex;
-    justify-content:flex-end;
-    align-items:flex-end;
-    vertical-align: middle;
-    background: white;
-    text-align: center;
-    position: relative
+    body, h1, h2, h3, h4, h5, h6 {
+        font-family: "Raleway", sans-serif
     }
-    
 
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
+    body, html {
+        height: 100%;
+        line-height: 1.8;
+    }
+    /* Full height image header */
+    .bgimg-1 {
+        background-position: center;
+        background-size: cover;
+        background-image: url(images/cleanHouse.jpg);
+        min-height: 100%;
+    }
 
-.dropdown .dropbtn {
-    font-size: 16px;    
-    border: none;
-    outline: none;
-    color: black;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+    .bar .button {
+        padding: 16px;
+    }
 
-.dropdown:hover .dropbtn {
-    background-color: red;
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
 
-.dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: black;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
+        .dropdown:hover .dropbtn {
+            background-color: red;
+        }
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-    
-.autocomplete {
-  /*the container must be positioned relative:*/
-  position: relative;
-  display: inline-block;
-}
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
 
-.autocomplete-items {
-  position: absolute;
-  border: 1px solid #d4d4d4;
-  border-bottom: none;
-  border-top: none;
-  z-index: 99;
-  /*position the autocomplete items to be the same width as the container:*/
-  top: 100%;
-  left: 0;
-  right: 0;
-}
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
 
-.autocomplete-items div {
-  padding: 10px;
-  cursor: pointer;
-  background-color: #fff; 
-  border-bottom: 1px solid #d4d4d4; 
-}
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
 
-.autocomplete-items div:hover {
-  /*when hovering an item:*/
-  background-color: #e9e9e9; 
-}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
 
-.autocomplete-active {
-  /*when navigating through the items using the arrow keys:*/
-  background-color: DodgerBlue !important; 
-  color: #ffffff; 
-}
+    .autocomplete {
+        /*the container must be positioned relative:*/
+        position: relative;
+        display: inline-block;
+    }
+
+    .autocomplete-items {
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+        .autocomplete-items div {
+            padding: 10px;
+            cursor: pointer;
+            background-color: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+            .autocomplete-items div:hover {
+                /*when hovering an item:*/
+                background-color: #e9e9e9;
+            }
+
+    .autocomplete-active {
+        /*when navigating through the items using the arrow keys:*/
+        background-color: DodgerBlue !important;
+        color: #ffffff;
+    }
 </style>
-    
+
 <body>
 
     <!-- Navbar (sit on top) -->
@@ -144,7 +138,7 @@ body, html {
                         <a href="#">ESPAÑOL</a>
                         <a href="#">FRANÇAIS</a>
                         <a href="#">ITALIANO</a>
-                        <a href="#">PORTUGUÊS</a>
+                        <a href="indexBR.html">PORTUGUÊS</a>
                     </div>
 
                 </div>
@@ -173,7 +167,7 @@ body, html {
                 <a href="#">ESPAÑOL</a>
                 <a href="#">FRANÇAIS</a>
                 <a href="#">ITALIANO</a>
-                <a href="#">PORTUGUÊS</a>
+                <a href="indexBR.html">PORTUGUÊS</a>
             </div>
         </div>
     </nav>
@@ -265,26 +259,31 @@ body, html {
                             </div>
                         </div>
 
-                        <center><button type="submit" class="btn" alt="Download our app"><img class="btn" src="images/imagemBotoesAppleEGoogle.png"></button></center>
+                        <button onclick="document.getElementById('id01').style.display='block'" class="button dark-grey"><i class="fa fa-search margin-right"></i> Search availability</button>
                         <p></p>
 
                         <div id="id01" class="modal">
                             <div class="modal-content">
                                 <div class="container">
                                     <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
-                                    <form action="#">
+                                    <form action="profile.html">
                                         <div class="containerR">
                                             <h1>Login</h1>
                                             <hr>
-                                            <p>Look for jobs near you and use this money however you prefer: to pay your bills, to buy gifts, to travel the world. Yes, you can contact several hosts, use the payment to stay wherever you want to, have discounts and good prices.</p>
 
-                                            <center><button type="submit" class="btn" alt="Download our app"><img class="btn" src="images/imagemBotoesAppleEGoogle.png"></button></center>
+                                            <label for="email"><b>Email</b></label>
+                                            <input type="text" placeholder="Enter Email" name="email">
+
+                                            <label for="psw"><b>Password</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw">
+
+                                            <button type="submit" class="registerbtn">Login</button>
 
                                         </div>
                                     </form>
                                     <div class="container signin">
                                         <p>Don´t have an account yet?</p>
-                                        <form action="#">
+                                        <form action="profileEdit.html">
                                             <button type="submit" class="button black">Create your AirJobs Account</button>
                                         </form>
                                         <p></p>
@@ -305,63 +304,66 @@ body, html {
         <p class="center large">Earn extra money. Start here!</p>
 
 
-        <form action="#">
-            <div class="containerR">
+        <div class="containerR">
+
+            <form method="post" id="createUserForm">
+                <h1>Login</h1>
+                <hr>
+
+                <label for="FirstName"><b>First Nome</b></label>
+                <input type="text" placeholder="Enter First Name" id="FirstName" name="FirstName" required>
+
+                <label for="LastName"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" id="LastName" name="LastName" required>
+
+                <label for="Email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" id="Email" name="Email" required>
+
+                <label for="Password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="Password" name="Password" required>
+
+                <button type="submit" class="registerbtn">Create</button>
+            </form>
+
+            <br>
+            <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+        </div>
+        <button class="bEdit" type="button" name="answer" onclick="ShowDiv()"></button>
 
 
-                <form action="#">
-                    <div class="containerR">
+        <div class="container signin">
+            <p>Don´t have an account yet?</p>
+            <form action="profileEditCLEANER.html">
+                <button type="submit" class="button black">Create your AirJobs Account</button>
+            </form>
+            <p></p>
+        </div>
 
 
-                        <p class="margin-left">Look for jobs near you and use this money however you want: pay your bills, buy gifts, go travel the world...</p>
-                        <p class="margin-left">Yes, you can get in touch with several hosts and use your job´s payment to stay wherever you want to, have discounts and good prices.</p>
-                        <p class="margin-left">Start now!</p>
-                        <br>
-                        <hr>
+        <div id="id01" class="modal">
+            <div class="modal-content">
+                <div class="container">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+                    <form action="profile.html">
+                        <div class="containerR">
+                            <h1>Login</h1>
+                            <hr>
 
-                        <center><button type="submit" class="btn" alt="Go to our App"><img class="btn" src="images/imagemBotoesAppleEGoogle.png"></button></center>
-                    </div>
-                </form>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" placeholder="Enter Email" name="email" required>
 
-                <br>
-                <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" placeholder="Enter Password" name="psw" required>
 
+                            <button type="submit" class="registerbtn">Login</button>
+                        </div>
+                    </form>
 
-
-            </div>
-            <button class="bEdit" type="button" name="answer" onclick="ShowDiv()"></button>
-
-
-
-
-
-            <div id="id01" class="modal">
-                <div class="modal-content">
-                    <div class="container">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
-                        <form action="#">
-                            <div class="containerR">
-                                <h1>Login</h1>
-                                <hr>
-
-                                <label for="email"><b>Email</b></label>
-                                <input type="text" placeholder="Enter Email" name="email" required>
-
-                                <label for="psw"><b>Password</b></label>
-                                <input type="password" placeholder="Enter Password" name="psw" required>
-
-                                <button type="submit" class="registerbtn">Login</button>
-                            </div>
-                        </form>
-
-                    </div>
                 </div>
             </div>
-        </form>
-
-
+        </div>
     </div>
-
 
     <!-- Pricing Section -->
     <div class="container center dark-grey" style="padding:128px 16px" id="pricing">
@@ -378,7 +380,43 @@ body, html {
                     <li class="padding-16">
                         <h2 class="wide">US$ 20</h2>
                     </li>
+                    <li class="light-grey padding-24">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="button black">Sign in</button>
+                        <p></p>
 
+                        <div id="id01" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+                                    <form action="profile.html">
+                                        <div class="containerR">
+                                            <h1>Login</h1>
+                                            <hr>
+
+                                            <label for="email"><b>Email</b></label>
+                                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                                            <label for="psw"><b>Password</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <button type="submit" class="registerbtn">Login</button>
+
+                                            <div class="container signin">
+                                                <p>Don´t have an account yet?</p>
+                                                <form action="profileEdit.html">
+                                                    <button type="submit" class="button black">Create your AirJobs Account</button>
+                                                </form>
+                                                <p></p>
+                                            </div>
+                                            <p></p>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
             <div class="third">
@@ -391,6 +429,43 @@ body, html {
                     <li class="padding-16">
                         <h2 class="wide">US$ 75</h2>
                     </li>
+                    <li class="light-grey padding-24">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="button black">Sign in</button>
+                        <p></p>
+
+                        <div id="id01" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+                                    <form action="profile.html">
+                                        <div class="containerR">
+                                            <h1>Login</h1>
+                                            <hr>
+
+                                            <label for="email"><b>Email</b></label>
+                                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                                            <label for="psw"><b>Password</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <button type="submit" class="registerbtn">Login</button>
+
+                                            <div class="container signin">
+                                                <p>Don´t have an account yet?</p>
+                                                <form action="profileEdit.html">
+                                                    <button type="submit" class="button black">Create your AirJobs Account</button>
+                                                </form>
+                                                <p></p>
+                                            </div>
+                                            <p></p>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </li>
                 </ul>
             </div>
             <div class="third section">
@@ -402,6 +477,42 @@ body, html {
                     <li class="padding-16"><b>up to</b> 2 bathrooms</li>
                     <li class="padding-16">
                         <h2 class="wide">US$ 30</h2>
+                    </li>
+                    <li class="light-grey padding-24">
+                        <button onclick="document.getElementById('id01').style.display='block'" class="button black">Sign in</button>
+                        <p></p>
+
+                        <div id="id01" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="button display-topright">&times;</span>
+                                    <form action="profile.html">
+                                        <div class="containerR">
+                                            <h1>Login</h1>
+                                            <hr>
+
+                                            <label for="email"><b>Email</b></label>
+                                            <input type="text" placeholder="Enter Email" name="email" required>
+
+                                            <label for="psw"><b>Password</b></label>
+                                            <input type="password" placeholder="Enter Password" name="psw" required>
+
+                                            <button type="submit" class="registerbtn">Login</button>
+
+                                            <div class="container signin">
+                                                <p>Don´t have an account yet?</p>
+                                                <form action="profileEdit.html">
+                                                    <button type="submit" class="button black">Create your AirJobs Account</button>
+                                                </form>
+                                                <p></p>
+                                            </div>
+                                            <p></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
                     </li>
                 </ul>
             </div>
@@ -416,7 +527,6 @@ body, html {
         <div class="section">
             <p><i class="fa fa-map-marker fa-fw xxlarge margin-right"></i> São Paulo, BR</p>
             <p><i class="fa fa-envelope fa-fw xxlarge margin-right"> </i> Email: airjobs@outlook.com.br</p>
-
         </div><br>
         <p>Lets get in touch. Send us a message:</p>
 
@@ -429,164 +539,45 @@ body, html {
                 <button class="button light-grey padding-large" type="submit">
                     <i class="fa fa-paper-plane"></i> SEND MESSAGE
                 </button>
-                <br>
             </p>
-            <p><center><button type="submit" class="btn" alt="Go to our App"><img class="btn" src="images/imagemBotoesAppleEGoogle.png"></button></center></p>
         </form>
         <!-- End Contact Section -->
     </div>
 
 
     <!-- Footer -->
-    <footer class="center black padding-64">
-        <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
-        <div class="xlarge section">
-            <i class="fa fa-facebook-official hover-opacity"></i>
-            <i class="fa fa-instagram hover-opacity"></i>
-            <i class="fa fa-pinterest-p hover-opacity"></i>
-            <i class="fa fa-linkedin hover-opacity"></i>
-        </div>
+<footer class="center black padding-64">
+    <a href="#home" class="button light-grey"><i class="fa fa-arrow-up margin-right"></i>To the top</a>
+    <div class="xlarge section">
+        <i class="fa fa-facebook-official hover-opacity"></i>
+        <i class="fa fa-instagram hover-opacity"></i>
+        <i class="fa fa-pinterest-p hover-opacity"></i>
+        <i class="fa fa-linkedin hover-opacity"></i>
+    </div>
 
-    </footer>
-
-    <script>
-
-        // Toggle between showing and hiding the sidebar when clicking the menu icon
-        var mySidebar = document.getElementById("mySidebar");
-
-        function sb_open() {
-            if (mySidebar.style.display === 'block') {
-                mySidebar.style.display = 'none';
-            } else {
-                mySidebar.style.display = 'block';
-            }
-        }
-
-        // Close the sidebar with the close button
-        function sb_close() {
-            mySidebar.style.display = "none";
-        }
-
-        /* AUTOCOMPLETE COUNTRY*/
-        function autocomplete(inp, arr) {
-            /*the autocomplete function takes two arguments,
-            the text field element and an array of possible autocompleted values:*/
-            var currentFocus;
-            /*execute a function when someone writes in the text field:*/
-            inp.addEventListener("input", function (e) {
-                var a, b, i, val = this.value;
-                /*close any already open lists of autocompleted values*/
-                closeAllLists();
-                if (!val) { return false; }
-                currentFocus = -1;
-                /*create a DIV element that will contain the items (values):*/
-                a = document.createElement("DIV");
-                a.setAttribute("id", this.id + "autocomplete-list");
-                a.setAttribute("class", "autocomplete-items");
-                /*append the DIV element as a child of the autocomplete container:*/
-                this.parentNode.appendChild(a);
-                /*for each item in the array...*/
-                for (i = 0; i < arr.length; i++) {
-                    /*check if the item starts with the same letters as the text field value:*/
-                    if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
-                        /*create a DIV element for each matching element:*/
-                        b = document.createElement("DIV");
-                        /*make the matching letters bold:*/
-                        b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-                        b.innerHTML += arr[i].substr(val.length);
-                        /*insert a input field that will hold the current array item's value:*/
-                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-                        /*execute a function when someone clicks on the item value (DIV element):*/
-                        b.addEventListener("click", function (e) {
-                            /*insert the value for the autocomplete text field:*/
-                            inp.value = this.getElementsByTagName("input")[0].value;
-                            /*close the list of autocompleted values,
-                            (or any other open lists of autocompleted values:*/
-                            closeAllLists();
-                        });
-                        a.appendChild(b);
-                    }
-                }
-            });
-            /*execute a function presses a key on the keyboard:*/
-            inp.addEventListener("keydown", function (e) {
-                var x = document.getElementById(this.id + "autocomplete-list");
-                if (x) x = x.getElementsByTagName("div");
-                if (e.keyCode == 40) {
-                    /*If the arrow DOWN key is pressed,
-                    increase the currentFocus variable:*/
-                    currentFocus++;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 38) { //up
-                    /*If the arrow UP key is pressed,
-                    decrease the currentFocus variable:*/
-                    currentFocus--;
-                    /*and and make the current item more visible:*/
-                    addActive(x);
-                } else if (e.keyCode == 13) {
-                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
-                    e.preventDefault();
-                    if (currentFocus > -1) {
-                        /*and simulate a click on the "active" item:*/
-                        if (x) x[currentFocus].click();
-                    }
-                }
-            });
-            function addActive(x) {
-                /*a function to classify an item as "active":*/
-                if (!x) return false;
-                /*start by removing the "active" class on all items:*/
-                removeActive(x);
-                if (currentFocus >= x.length) currentFocus = 0;
-                if (currentFocus < 0) currentFocus = (x.length - 1);
-                /*add class "autocomplete-active":*/
-                x[currentFocus].classList.add("autocomplete-active");
-            }
-            function removeActive(x) {
-                /*a function to remove the "active" class from all autocomplete items:*/
-                for (var i = 0; i < x.length; i++) {
-                    x[i].classList.remove("autocomplete-active");
-                }
-            }
-            function closeAllLists(elmnt) {
-                /*close all autocomplete lists in the document,
-                except the one passed as an argument:*/
-                var x = document.getElementsByClassName("autocomplete-items");
-                for (var i = 0; i < x.length; i++) {
-                    if (elmnt != x[i] && elmnt != inp) {
-                        x[i].parentNode.removeChild(x[i]);
-                    }
-                }
-            }
-            /*execute a function when someone clicks in the document:*/
-            document.addEventListener("click", function (e) {
-                closeAllLists(e.target);
-            });
-        }
-
-        /*An array containing all the country names in the world:*/
-        var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
-
-        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
-        autocomplete(document.getElementById("myInput"), countries);
-    </script>
-
-    <script>
-        function myRegisterFunction() {
-            var x = document.getElementById("myRegister");
-            if (x.style.display === "none") {
-                x.style.display = "block";
-            } else {
-                x.style.display = "none";
-            }
-        }
-    </script>
+</footer>
 
     <script>
         function ShowDiv() {
             document.getElementById("myRegister").style.display = "";
-        }</script>
+        }
+
+        $(document).ready(function () {
+            $("#createUserForm").on("submit", function (data) {
+                data.preventDefault();
+                data.stopPropagation();
+
+                var userVm = {};
+                $.map($(this).serializeArray(), function(n, i){
+                    userVm[n['name']] = n['value'];
+                });
+
+                $.post('http://airjobsauth.azurewebsites.net/api/register//api/register/', { userVm }, function () {
+                    alert("Cadastro realizado");
+                });
+            });
+        });
+    </script>
 
 </body>
 </html>

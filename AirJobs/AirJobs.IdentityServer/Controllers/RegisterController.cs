@@ -1,11 +1,11 @@
-﻿using AirJobs.Domain.Interfaces.Data.UnitOfWork;
+﻿using AirJobs.Domain.Entities.Users;
+using AirJobs.Domain.Interfaces.Data.UnitOfWork;
 using AirJobs.Domain.ValueObjects;
 using AirJobs.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
-using AirJobs.Domain.Entities.Users;
 
 namespace AirJobs.IdentityServer.Controllers
 {
@@ -28,10 +28,10 @@ namespace AirJobs.IdentityServer.Controllers
         }
 
         [HttpPost("api/register")]
-        public async Task<IActionResult> Create([FromBody]UserCreateDto userVm)
+        public async Task<HttpStatusCode> Create(UserCreateDto userVm)
         {
             if (!ModelState.IsValid)
-                return BadRequest("ModelState is invalid");
+                return HttpStatusCode.BadRequest;
 
             var newUser = await unitOfWork.User.Add(new User
             {
@@ -48,13 +48,13 @@ namespace AirJobs.IdentityServer.Controllers
             var identityResult = await userManager.CreateAsync(appUser, userVm.Password);
 
             if (!identityResult.Succeeded)
-                return BadRequest(identityResult.Errors.Select(x => x.Description).ToList());
+                return HttpStatusCode.BadRequest;
 
             var result = await unitOfWork.SaveAsync();
             if (!result)
-                return NoContent();
+                return HttpStatusCode.NoContent;
 
-            return Ok();
+            return HttpStatusCode.OK;
         }
     }
 }

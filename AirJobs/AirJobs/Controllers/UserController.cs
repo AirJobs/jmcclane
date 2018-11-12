@@ -60,6 +60,12 @@ namespace AirJobs.Controllers
             return Ok(schedulingsVm);
         }
 
+        [HttpPost()]
+        public async Task Create(string email, string password)
+        {
+
+        }
+
         [HttpGet("{userId:guid}/addresses")]
         [ProducesResponseType((int)HttpStatusCode.OK, Type = typeof(IEnumerable<AddressListDto>))]
         public async Task<IActionResult> ListAddress(Guid userId)
