@@ -64,7 +64,7 @@ namespace AirJobs.IdentityServer
 
             app.UseCors(builder =>
             {
-                builder.WithOrigins("https://localhost:44344", "http://airjobsweb.azurewebsites.net", "https://airjobs.com.br");
+                builder.WithOrigins("https://localhost:44344", "http://airjobsweb.azurewebsites.net", "http://www.airjobs.com.br");
                 builder.AllowAnyMethod();
                 builder.AllowAnyHeader();
             });
