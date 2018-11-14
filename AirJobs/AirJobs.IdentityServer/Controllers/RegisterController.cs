@@ -4,7 +4,7 @@ using AirJobs.Domain.ValueObjects;
 using AirJobs.IdentityServer.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Net;
+using System;
 using System.Threading.Tasks;
 
 namespace AirJobs.IdentityServer.Controllers
@@ -28,33 +28,40 @@ namespace AirJobs.IdentityServer.Controllers
         }
 
         [HttpPost("api/register")]
-        public async Task<HttpStatusCode> Create(UserCreateDto userVm)
+        public async Task<IActionResult> Create(UserCreateDto userVm)
         {
-            if (!ModelState.IsValid)
-                return HttpStatusCode.BadRequest;
-
-            var newUser = await unitOfWork.User.Add(new User
+            try
             {
-                Name = new Name(userVm.FirstName, userVm.LastName)
-            });
+                if (!ModelState.IsValid)
+                    return BadRequest("Model invalid");
 
-            var appUser = new ApplicationUser
+                var newUser = await unitOfWork.User.Add(new User
+                {
+                    Name = new Name(userVm.FirstName, userVm.LastName)
+                });
+
+                var appUser = new ApplicationUser
+                {
+                    Email = userVm.Email,
+                    UserName = userVm.Email,
+                    UserId = newUser.Id
+                };
+
+                var identityResult = await userManager.CreateAsync(appUser, userVm.Password);
+
+                if (!identityResult.Succeeded)
+                    return BadRequest(identityResult.Errors);
+
+                var result = await unitOfWork.SaveAsync();
+                if (!result)
+                    return BadRequest("User not save");
+
+                return Ok("success");
+            }
+            catch (Exception e)
             {
-                Email = userVm.Email,
-                UserName = userVm.Email,
-                UserId = newUser.Id
-            };
-
-            var identityResult = await userManager.CreateAsync(appUser, userVm.Password);
-
-            if (!identityResult.Succeeded)
-                return HttpStatusCode.BadRequest;
-
-            var result = await unitOfWork.SaveAsync();
-            if (!result)
-                return HttpStatusCode.NoContent;
-
-            return HttpStatusCode.OK;
+                return BadRequest(e);
+            }
         }
     }
 }

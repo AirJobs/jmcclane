@@ -572,9 +572,13 @@
                     userVm[n['name']] = n['value'];
                 });
 
-                $.post('http://airjobsauth.azurewebsites.net/api/register/', { userVm }, function () {
-                    alert("Cadastro realizado");
-                });
+                $.post('http://airjobsauth.azurewebsites.net/api/register/', { userVm })
+                    .done(function() {
+                        alert("Cadastro realizado!");
+                    })
+                    .fail(function(data) {
+                        console.log(data);
+                    });
             });
         });
     </script>
